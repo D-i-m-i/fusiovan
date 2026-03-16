@@ -2,7 +2,6 @@ Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/ra
 
 PROJECT NAME
 FusioVan - a web app to help aspiring DIY camper van builders choose their appliances and solar energy system components in a user friendly way
-Visit the production version at http://www.fusiovan.com/
 
 DESCRIPTION
 This project has used the LeWagon Rails Devise template. This template installed everything necessary to go straight into prototyping the application and avoid spending a long time in configuration. As the Rails doctrine states, 'Convention over Configuration'. Heroku was used for deploying the application to production.
