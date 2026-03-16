@@ -1,0 +1,22 @@
+<div class="builds-card-container">
+  <div class="d-flex justify-content-between inner-space">
+    <div>
+      <div class="build-title">
+        <p><strong><%= build.battery.model %></strong></p>
+      </div>
+      <div class="build-model">
+        <p><strong><%= build.battery.make %></strong></p>
+      </div>
+      <div class="build-price">
+        <p class="mt-3"><strong>$ <%= build.battery.price %></strong></p>
+      </div>
+    </div>
+    <%= image_tag "battery_color.png" %>
+  </div>
+  <div class="build-text text-center mt-1">
+    <p><strong>Volts: <%= build.battery.voltage %>/ Amps: <%= build.battery.amp_hours %></strong></p>
+  </div>
+  <div class="build-link text-center mt-2">
+    <a href="#">Go to product page</a>
+  </div>
+</div>

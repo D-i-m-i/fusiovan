@@ -1,0 +1,19 @@
+<div class="page-headers">
+  <h1>Welcome <%= current_user.first_name %>!</h1>
+</div>
+<div class="card-wrapper-new">
+<h2 class="pb-3">My builds</h2>
+  <div class="cards-new">
+      <% current_user.builds.each do |build| %>
+        <%= render "shared/build_card", build: build, appliances: build.appliances %>
+      <% end %>
+  </div>
+  <br>
+  <br>
+  <h2 class="pb-3 pt-6">My bookmarks</h2>
+  <div class="cards-new">
+      <% current_user.bookmarks.each do |bookmark| %>
+        <%= render "shared/build_card", build: bookmark.build, appliances: bookmark.build.appliances %>
+      <% end %>
+  </div>
+</div>

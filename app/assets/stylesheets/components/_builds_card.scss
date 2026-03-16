@@ -1,0 +1,108 @@
+.builds-card-container-new {
+  overflow: hidden;
+  border-radius: 11px;
+  padding: 15px;
+  background: white;
+  transition: 0.2s;
+  height: 250px;
+  width: 329px;
+
+  &:hover {
+    transform: scale(1.05);
+    }
+}
+
+.build-title-new {
+  font-size: 22px;
+  color: black;
+  font-family: 'Roboto', sans-serif;
+}
+
+.build-price-new {
+  font-size: 19px;
+  font-style: bold;
+  color: #142970;
+}
+
+.build-text-new {
+  font-size: 18px;
+  color: #142970;
+}
+
+.container-trio-new {
+  margin-top: 20px;
+}
+
+.cards-new {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  row-gap: 20px;
+}
+
+.trio-line {
+  border-top: 1px solid grey;
+}
+
+.card-shadow {
+  box-shadow:0 0 10px rgba(29, 48, 112, 0.4);
+}
+
+.cards-line {
+  border-bottom: 1px solid #D9D9D9;
+}
+
+.appliances-text {
+  font-size: 14px;
+  color: #807E7E;
+  font-family: 'Roboto', sans-serif;
+}
+
+.right-border {
+  border-right: 1px solid #D9D9D9;
+}
+
+.box-relative {
+  position: relative;
+}
+
+.card-bottom-boxes-position {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

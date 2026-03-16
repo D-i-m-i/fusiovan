@@ -1,0 +1,65 @@
+.btn-flat {
+  color: white;
+  background-color: $primary;
+  padding: 10px 30px 10px 30px;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+  box-shadow: 0 0 10px rgba(29, 48, 112, 0.4);
+  font-size: 18px;
+}
+
+.btn-banner {
+  color: white;
+  background-color: $primary;
+  padding: 10px 30px 10px 30px;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+  box-shadow: 0 0 10px rgba(29, 48, 112, 0.4);
+  font-size: 18px;
+}
+
+.btn-flat:hover {
+  background: $orange;
+  color: white;
+}
+
+.btn-banner:hover {
+  background: $orange;
+  color: white;
+}
+
+.btn-first {
+  color: white;
+  background-color: $primary;
+  min-width: 150px;
+  padding: 8px 34px;
+  height: 40px;
+  border: 1px solid $primary;
+  border-radius: 50px;
+  transition: background 0.3s ease;
+}
+
+.btn-first:hover {
+  background: $orange;
+  border: 1px solid $orange;
+  color: white;
+}
+
+.btn-ghost {
+  margin: 0 20px;
+  min-width: 150px;
+  color: $primary;
+  background-color: white;
+  border: 1px solid $primary;
+  padding: 8px 34px;
+  height: 40px;
+  border-radius: 50px;
+  opacity: 0.6;
+  transition: background 0.3s ease;
+}
+
+.btn-ghost:hover {
+  opacity: 1;
+  font: bold;
+
+}

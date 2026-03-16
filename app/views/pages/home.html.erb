@@ -1,0 +1,184 @@
+<div class="header" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path "van_background_2.jfif" %>');">
+  <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+  <div class="overlay"></div>
+  <%#= image_tag "van_background.jpeg" %>
+   <!-- The header content -->
+  <div class="container h-100">
+    <div class="d-flex h-100 text-center align-items-center">
+      <div class="w-100 text-white">
+        <h1 class="display-1">FusioVan</h1>
+        <span data-controller="typed-js" class="slogan"></span> <br>
+        <%= link_to "Get started", builds_path, class: "btn btn-banner mt-3" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mh-100" style="height: 90px"></div>
+<div class="row m-0">
+  <%# <div class="col-lg-3"></div> %>
+  <div class="top-lettering">
+    <div id="white_rectangle">
+      Design, optimise and share
+    </div>
+  </div>
+  <div class="blue-box">
+    <div class="blue-leftside"></div>
+    <div id="blue_rectangle">
+      Your <strong>custom</strong> van build
+    </div>
+    <div class="blue-rightside"></div>
+
+</div>
+<div class="container">
+  <div class="mh-50" style="height: 50px"></div>
+    <div class="p-center">
+    Fusiovan makes building your custom van easy.
+    <br>
+    Mix and match a wide variety of appliances and components
+    <br>
+     to get the <strong>perfect build</strong>.
+    </div>
+  <%# <div class="mh-100" style="height: 50px"></div> %>
+  <div class="row justify-content-center">
+    <div class="col-lg-3 d-flex justify-content-center"></div>
+    <div class="col-lg-3 d-flex justify-content-center">
+      <%= link_to "Create a build", new_build_path, class: "btn btn-flat mt-5 pl-5 pr-5" %>
+    </div>
+    <div class="col-lg-3 d-flex justify-content-center">
+      <%= link_to "Explore all builds", builds_path, class: "btn btn-flat mt-5" %>
+    </div>
+    <div class="col-lg-3 d-flex justify-content-center"></div>
+    <div class="mh-100" style="height: 150px"></div>
+    <h2 class="home-headers">Designing a van is a whole adventure</h2>
+    <div class="image-iceberg" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= image_path "iceberg.png" %>');"></div>
+    <div class="mh-100" style="height: 150px"></div>
+    <h2 class="home-headers">Build your van in 3 simple steps</h2>
+    <div class="col-lg-4 justify-content-center">
+      <div class="image-step" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= image_path "step_1.png" %>');"></div>
+      <div class="row margin-left-large">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-5 text-end mt-3" style="font-size: 20px">
+          <p>Create your user profile<p>
+        </div>
+        <div class="col-lg-3 text-start align-content-top" style="font-size: 50px">
+          1
+        </div>
+        <div class="col-lg-2"></div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="image-step" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= image_path "step_2.png" %>');"></div>
+      <div class="row margin-left-large">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-5 text-end mt-3" style="font-size: 20px">
+          <p>Use the build generator to choose your appliances<p>
+        </div>
+        <div class="col-lg-3 text-start align-content-top" style="font-size: 50px">
+          2
+        </div>
+        <div class="col-lg-2"></div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="image-step" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= image_path "step_3.png" %>');"></div>
+      <div class="row margin-left-large">
+        <div class="col-lg-2"></div>
+        <div class="col-lg-5 text-end mt-3" style="font-size: 20px">
+          <p>See your custom build summary and start building your dream van!<p>
+        </div>
+        <div class="col-lg-3 text-start align-content-top" style="font-size: 50px">
+          3
+        </div>
+        <div class="col-lg-2"></div>
+      </div>
+    </div>
+  </div>
+  <div class="mh-100" style="height: 150px"></div>
+  <h2 class="home-headers">Explore the world’s first custom van build designer</h2>
+  <div class="mh-100" style="height: 60px"></div>
+    <div class="row d-flex justify-content-around">
+      <div class="card-strength d-flex align-items-center">
+        <div class="row">
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div class="image-strength" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= image_path "safety.png" %>');"></div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-center">
+            <h5>Ensure <strong>safety</strong> of your build's <strong>electric system</strong></h5>
+          </div>
+        </div>
+      </div>
+      <div class="card-strength d-flex align-items-center">
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div class="image-strength" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= image_path "customize.png" %>');"></div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-center">
+            <h5><strong>Customise your build</strong> aligning <strong>automatically</strong> electric capability and consumption</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mh-100" style="height: 50px"></div>
+    <div class="row d-flex justify-content-around">
+      <div class="card-strength d-flex align-items-center">
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div class="image-strength" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= image_path "parts.png" %>');"></div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-center">
+            <h5><strong>Choose</strong> from a wide <strong>range of proposed parts</strong> and products <strong>matching your build’s</strong> requirements</h5>
+          </div>
+        </div>
+      </div>
+      <div class="card-strength d-flex align-items-center">
+        <div class="row d-flex align-items-center">
+          <div class="col-lg-4 d-flex justify-content-center">
+            <div class="image-strength" style="background-image: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0)), url('<%= image_path "people.png" %>');"></div>
+          </div>
+          <div class="col-lg-8 d-flex align-items-center">
+            <h5><strong>Benefit</strong> from the <strong>input</strong> of our <strong>vibrant community</strong> of van enthusiasts</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mh-100" style="height: 150px"></div>
+      <h2 class="home-headers">Recent builds from our community</h2>
+    <div class="mh-100" style="height: 60px"></div>
+    <div class="homepage-cards">
+      <div class="cards-new mb-5"> <% @builds.each do |build| %>
+          <%= render "shared/build_card", build: build, appliances: build.appliances %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="mh-100" style="height: 150px"></div>
+  <div class="footer-dark">
+      <footer>
+          <div class="container">
+              <div class="row">
+                  <div class="col-sm-6 col-md-3 item">
+                      <h3>Services</h3>
+                      <ul>
+                          <li><a href="#">Custom van design tool</a></li>
+                          <li><a href="#">Private van consulting sessions</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-6 col-md-3 item">
+                      <h3>About</h3>
+                      <ul>
+                          <li><a href="#">Company</a></li>
+                          <li><a href="#">Team</a></li>
+                          <li><a href="#">Careers</a></li>
+                      </ul>
+                  </div>
+                  <div class="col-md-6 item text">
+                      <h3>FusioVan</h3>
+                      <p>FusioVan is a leading provider of custom van design solutions. Thanks to our proprietary build creation tool, we help thousands of vanlifers each year to deal easily with the complexity of building a van's solar electric system. </p>
+                  </div>
+                  <div class="col item social"><i class="fab fa-twitter p-2"></i><i class="fab fa-facebook p-2"></i><i class="fab fa-instagram p-2"></i></div>
+              </div>
+              <p class="copyright">FusioVan © 2022</p>
+          </div>
+      </footer>
+  </div>

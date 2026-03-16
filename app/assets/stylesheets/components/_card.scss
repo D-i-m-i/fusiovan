@@ -1,0 +1,28 @@
+.card-step {
+  position: relative;
+}
+
+.step-number {
+  position: absolute;
+  top: 80px;
+}
+
+.card-strength {
+  height: 200px;
+  width: 600px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(29, 48, 112, 0.4);
+  transition: 0.2s;
+
+  &:not(.no-hover) {
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+}
+
+.padding-icon {
+  padding: 20px;
+}

@@ -1,0 +1,16 @@
+current directory: /home/dimi/Downloads/fusiovan-master/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+/home/dimi/.rbenv/versions/2.7.7/bin/ruby -I /home/dimi/.rbenv/versions/2.7.7/lib/ruby/2.7.0 -r ./siteconf20260316-55958-g1454s.rb extconf.rb
+checking for -lstdc++... yes
+creating Makefile
+
+current directory: /home/dimi/Downloads/fusiovan-master/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+make "DESTDIR=" clean
+
+current directory: /home/dimi/Downloads/fusiovan-master/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+make "DESTDIR="
+compiling unf.cc
+linking shared-object unf_ext.so
+
+current directory: /home/dimi/Downloads/fusiovan-master/vendor/bundle/ruby/2.7.0/gems/unf_ext-0.0.8.2/ext/unf_ext
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 unf_ext.so ./.gem.20260316-55958-cg4bp4

@@ -1,0 +1,82 @@
+.builds-card-container {
+  height: 251px;
+  width: 307px;
+  border: 3px solid #142970;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 32px;
+  box-shadow: 0 0 10px rgba(29, 48, 112, 0.4);
+  transition: 0.2s;
+  &:not(.no-hover) {
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.appliance-title {
+  font-size: 31px;
+  font-style: bold;
+  color: #142970;
+}
+
+.appliance-model {
+  font-size: 19px;
+  font-style: bold;
+  color: #142970;
+}
+
+.appliance-price {
+  font-size: 19px;
+  font-style: bold;
+  color: #142970;
+}
+
+.build-text {
+  font-size: 18px;
+  color: #142970;
+}
+
+.build-link {
+  font-size: 18px;
+  color: #142970;
+}
+
+.builds-card-container img {
+  height: 70px;
+  width: 120px;
+  object-fit: contain;
+}
+
+.inner-space {
+  padding: 12px;
+}
+
+.card-space {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 24px;
+}
+
+.appliance-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.battery-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.solar_panel-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}

@@ -1,0 +1,87 @@
+
+<div class="card-overview box-relative">
+  <div class="d-flex justify-content-between">
+    <h2 class="mb-0">Overview</h2>
+    <% if @build.user.user_url != nil %>
+    <%= image_tag @build.user.user_url, class: "avatar-large", alt: "avatar-large" %>
+    <%  else %>
+    <%= cl_image_tag @build.user.photo.key, class: "avatar-large", alt: "avatar-large"%>
+    <% end%>
+  </div>
+  <h3 class="p-1 my-3"><strong>Appliances</strong></h3>
+  <div class="d-flex mb-3" style="flex-wrap: wrap;">
+    <% @build.appliances.each do |appliance| %>
+      <% if appliance.kind == "inverter" %>
+        <div class="pill-container me-1 mb-2">
+          <span class="pill-font">🔌 inverter</span>
+        </div>
+      <% elsif appliance.kind == "lights"%>
+        <div class="pill-container me-1 mb-2">
+          <span class="pill-font">💡 lights</span>
+        </div>
+      <% elsif appliance.kind == "fridge"%>
+        <div class="pill-container me-1 mb-2">
+          <span class="pill-font">❄️ fridge</span>
+        </div>
+      <% elsif appliance.kind == "fan"%>
+        <div class="pill-container me-1 mb-2">
+          <span class="pill-font">💨 fan</span>
+        </div>
+      <% elsif appliance.kind == "pump"%>
+        <div class="pill-container me-1 mb-2">
+          <span class="pill-font">💧 Water pump</span>
+        </div>
+      <% elsif appliance.kind == "charger"%>
+        <div class="pill-container me-1 mb-2">
+          <span class="pill-font">⚡️ 12V charger</span>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+  <div class="pill-grid pill-text mb-3">
+    <% @build.appliances.pluck(:kind).each do |kind| %>
+      <% if kind == "fridge" %>
+        <p class="me-1 mb-1">❄️ <%= @build.fridge_use_hours.to_i %> hr = <%= @build.fridge_amp_hours.round(2) %> Ah</p>
+      <% elsif kind == "inverter" %>
+      <p class="me-1 mb-1">🔌  <%= @build.inverter_use_hours.to_i %> hr = <%= @build.inverter_amp_hours.round(2) %> Ah</p>
+      <% elsif kind == "fan" %>
+      <p class="me-1 mb-1">💨 <%= @build.fan_use_hours.to_i %> hr = <%= @build.fan_amp_hours.round(2) %> Ah</p>
+      <% elsif kind == "lights" %>
+      <p class="me-1 mb-1">💡 <%= @build.lights_use_hours.to_i %> hr = <%= @build.lights_amp_hours.round(2) %> Ah</p>
+      <% elsif kind == "pump" %>
+      <p class="me-1 mb-1">💧 <%= @build.pump_use_hours.to_i %> hr = <%= @build.pump_amp_hours.round(2) %> Ah</p>
+      <% elsif kind == "charger" %>
+      <p class="me-1 mb-1"> ⚡️ <%= @build.charger_use_hours.to_i %> hr = <%= @build.charger_amp_hours.round(2) %> Ah</p>
+      <% end %>
+    <% end %>
+  </div>
+
+  <div class="d-flex d-flex align-items-start flex-column bd-highlight">
+    <div class="p-1 bd-highlight">
+      <p class="mb-0">Total daily battery usage</p>
+      <h5 class="mt-1"><%= @build.total_amp_hours %> Ah</h5>
+    </div>
+
+    <div class="p-1 bd-highlight">
+      <%# <p class="mb-2"><strong>Battery</strong></p> %>
+      <p class="mb-2">Battery</p>
+       <strong> <p class="mb-2">🔋 <%= @build.battery.make %> <%= @build.battery.kind %>  |  <%= @build.battery.amp_hours %> Ah</p></strong>
+    </div>
+    <div class="p-1 bd-highlight">
+      <%# <p class="mb-2"><strong>Solar Panel</strong></p> %>
+      <p class="mb-2">Solar Panel</p>
+       <strong> <p class="mb-2">☀️ <%= @build.solar_panel.make %> <%= @build.solar_panel.kind %> Mono |  <%= @build.solar_panel.watts %> Watts</p></strong>
+    </div>
+
+    <div class="d-flex border-top card-bottom-boxes-position w-100">
+      <%# <div class="d-flex flex-column right-border ps-3" style="flex-grow: 1;width: 121%;">
+        <p>Daily Build Capacity</p>
+        <p class="small-text ">100 ah</p>
+      </div> %>
+      <div class="d-flex flex-column w-100 px-4 mb-4 mt-3">
+        <p class="mb-0">Total price</p>
+        <h3 class="mt-2">$<%= @build.set_total_price %></h3>
+      </div>
+    </div>
+  </div>
+</div>

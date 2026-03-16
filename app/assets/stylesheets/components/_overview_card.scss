@@ -1,0 +1,57 @@
+.card-overview {
+  background: white;
+  box-shadow: 0 0 10px rgba(29, 48, 112, 0.4);
+  height: 95%;
+  padding: 18px;
+  border-radius: 11px;
+  width: 330px;
+  height: 83vh;
+  margin-right: 32px;
+  color: #3E3B3B;
+  margin-top: 12px;
+}
+
+.card-overview h2 {
+  font-size: 34px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-overview h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0;
+  color: #3E3B3B;
+}
+
+
+.card-overview p {
+  font-size: 14px;
+  margin: 0;
+  color: #3E3B3B;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 44px;
+  position: relative;
+  margin-right: 520px;
+}
+
+.pill-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.pill-text {
+  font-size: 10px;
+  color: #807E7E;
+  font-family: 'Roboto', sans-serif;
+}
+
+.sidebar-overview {
+  position: fixed;
+  top: 95px;
+  right: 0px;
+}

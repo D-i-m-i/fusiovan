@@ -1,0 +1,56 @@
+      <%= link_to build_path(build), class: "text-decoration-none text-black", target: :_blank do %>
+        <div class="builds-card-container-new card-shadow box-relative">
+          <div class="d-flex justify-content-between">
+            <div>
+              <div class="build-title-new">
+                <p class="mb-1"><%= build.name %></p>
+              </div>
+            </div>
+            <% if build.user.user_url != nil %>
+            <%= image_tag build.user.user_url, class: "avatar-large", alt: "avatar-large" %>
+            <%  else %>
+            <%= cl_image_tag build.user.photo.key, class: "avatar-large", alt: "avatar-large"%>
+            <% end%>
+          </div>
+          <p class="appliances-text mb-2">Appliances</p>
+          <div class="d-flex" style="flex-wrap: wrap">
+            <% appliances.each do |appliance| %>
+              <% if appliance.kind == "inverter" %>
+                <div class="pill-container me-1 mb-1">
+                  <span class="pill-font"> 🔌 inverter</span>
+                </div>
+              <% elsif appliance.kind == "lights"%>
+                <div class="pill-container me-1 mb-1">
+                  <span class="pill-font"> 💡 lights</span>
+                </div>
+              <% elsif appliance.kind == "fridge"%>
+                <div class="pill-container me-1 mb-1">
+                  <span class="pill-font"> ❄️ fridge</span>
+                </div>
+              <% elsif appliance.kind == "fan"%>
+                <div class="pill-container me-1 mb-1">
+                  <span class="pill-font"> 💨 fan</span>
+                </div>
+              <% elsif appliance.kind == "charger"%>
+                <div class="pill-container me-1 mb-1">
+                  <span class="pill-font"> ⚡ 12V charger</span>
+                </div>
+              <% elsif appliance.kind == "pump"%>
+                <div class="pill-container me-1 mb-1">
+                  <span class="pill-font"> 💧 water pump</span>
+                </div>
+              <% end %>
+            <% end %>
+          </div>
+          <div class="appliances-text d-flex border-top card-bottom-boxes-position w-100">
+            <div class="d-flex flex-column w-100 right-border ps-3">
+              <p class="mb-2 pt-2">Daily Battery Usage</p>
+              <p class="text-black"><strong><%= build.total_amp_hours.round(2) %> Ah</strong></p>
+            </div>
+            <div class="d-flex flex-column w-100 ps-3">
+              <p class="mb-2 pt-2">Total Price</p>
+              <p class="text-black"><strong>$<%= build.total_price %></strong></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
